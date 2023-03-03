@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UserManagement</string>
+    <string name="itemAboutApp">About App</string>
+    <string name="Settigs">Settings</string>
+    <string name="ItemExit">Exit</string>
+
+</resources>

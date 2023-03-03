@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:layout_margin="15dp"
+    >
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/enter_FirstName"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:hint="Enter First Name"
+            android:layout_margin="10dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="18"
+            app:endIconMode="clear_text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:maxLength="18"
+
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/enter_LastName"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="18"
+            app:endIconMode="clear_text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:hint="Enter Last Name"
+            android:layout_margin="10dp"
+            >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:maxLength="18"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/enter_email"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="Enter Email Address"
+        android:layout_margin="10dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="30"
+        app:endIconMode="clear_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/enter_ph"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="Enter Phone Name"
+        android:layout_margin="10dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:endIconMode="clear_text"
+        app:prefixText="+91"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone|number"
+            android:maxLength="10"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/enter_altPhNo"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="Enter Alternative Phone Number"
+        android:layout_margin="10dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:endIconMode="clear_text"
+        app:prefixText="+91"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone|number"
+            android:maxLength="10"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender :"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:id="@+id/Radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        >
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textSize="20sp"
+            />
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textSize="20sp"
+            />
+        <RadioButton
+            android:id="@+id/other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"
+            android:textSize="20sp"
+            />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/textHobbies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Radiogroup"
+        android:text="Hobbies"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:textStyle="bold"
+        android:textSize="25sp"/>
+
+    <CheckBox
+        android:id="@+id/H_programming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Programming"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"/>
+    <CheckBox
+        android:id="@+id/H_Study_Novel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:text="Study Novel"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"/>
+    <CheckBox
+        android:id="@+id/H_watchingMovies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Watching Movies"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"/>
+    <CheckBox
+        android:id="@+id/H_Travelling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Travelling"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"/>
+    <CheckBox
+        android:id="@+id/H_Gaming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Gaming"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"/>
+
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/submit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="SUBMIT"
+    android:layout_gravity="center"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="20dp"
+/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/AboveDataShowing"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:textSize="25sp"
+        />
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CLEAR"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="30dp"/>
+</LinearLayout>
+</ScrollView>
