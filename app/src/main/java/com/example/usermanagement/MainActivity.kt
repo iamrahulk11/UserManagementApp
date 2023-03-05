@@ -1,6 +1,7 @@
 package com.example.usermanagement
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -11,8 +12,13 @@ import android.widget.CompoundButton
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
+import android.widget.Toolbar
 import androidx.appcompat.app.AlertDialog
 import com.example.usermanagement.databinding.ActivityMainBinding
+import com.example.usermanagement.util.keys
+import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.internal.ToolbarUtils
+import com.google.gson.Gson
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -23,11 +29,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
     private var lname: String? = null
     private var mobileNo: String? = null
     private var email: String? = null
-    var altMobNo: String? = null
+    private var altMobNo: String? = null
     lateinit var context: Context
     private var txtGender: String? = null
-    var UserHobbies: ArrayList<String> = ArrayList()
-
+    private var UserHobbies: ArrayList<String> = ArrayList()
     //private val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\.+[a-z]+"
     // var check :Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,11 +40,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         context = this@MainActivity
+        binding.enterFirstName.editText!!.requestFocus()
 
-        binding.AboveDataShowing.visibility = View.INVISIBLE
-        binding.clear.visibility = View.INVISIBLE
+//        binding.AboveDataShowing.visibility = View.INVISIBLE
+//        binding.clear.visibility = View.INVISIBLE
         binding.submit.setOnClickListener(this)
-        binding.clear.setOnClickListener(this)
+//        binding.clear.setOnClickListener(this)
 
         // Radio Group/Radio Button listener
         binding.Radiogroup.setOnCheckedChangeListener(this)
@@ -56,7 +62,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
         // menuInflater.inflate(R.menu.menu_design,menu)
         val inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.menu_title, menu)
-        return super.onCreateOptionsMenu(menu)
+       return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -246,20 +252,34 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
                     return
                 }
 
-                binding.enterFirstName.isEnabled = false
+                /*binding.enterFirstName.isEnabled = false
                 binding.enterLastName.isEnabled = false
                 binding.enterPh.isEnabled = false
                 binding.enterAltPhNo.isEnabled = false
-                binding.enterEmail.isEnabled = false
+                binding.enterEmail.isEnabled = false*/
 
-                binding.AboveDataShowing.visibility = View.VISIBLE
-                binding.clear.visibility = View.VISIBLE
-                binding.submit.isEnabled = false
-                val result=UserHobbies.toString().replace("[", "").replace("]", "").replace(",","\n").replace(" ","")
-                binding.AboveDataShowing.text =
-                    "UserName : $fname " + "$lname\n" + "Gender : ${txtGender}\n" + "Mobile Number : $mobileNo\n" + "Alternative Number : $altMobNo\n" + "Email : $email\n" + "UserHobbies :\n${result}"
+                /*binding.AboveDataShowing.visibility = View.VISIBLE
+                binding.clear.visibility = View.VISIBLE*/
+//                binding.submit.isEnabled = false
+//                val result=UserHobbies.toString().replace("[", "").replace("]", "").replace(",","\n").replace(" ","")
+//                binding.AboveDataShowing.text =
+//                    "UserName : $fname " + "$lname\n" + "Gender : ${txtGender}\n" + "Mobile Number : $mobileNo\n" + "Alternative Number : $altMobNo\n" + "Email : $email\n" + "UserHobbies :\n${result}"
+
+                val intent = Intent(this, SecondActivity::class.java)
+                val user = User()
+                user.fName = fname.toString()
+                user.lName = lname.toString()
+                user.mobNo = mobileNo.toString()
+                user.email = email.toString()
+                user.atlMob = altMobNo.toString()
+                user.gender = txtGender.toString()
+                user.hobbies = UserHobbies
+//        intent.putExtra(Keys.USER, user)
+                intent.putExtra(keys.JSON_USER, Gson().toJson(user))
+                startActivity(intent)
+                finish()
             }
-            R.id.clear -> {
+            /*R.id.clear -> {
 
                 binding.enterFirstName.isEnabled = true
                 binding.enterLastName.isEnabled = true
@@ -277,7 +297,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
                 binding.enterFirstName.editText!!.requestFocus()
 
             }
-
+*/
         }
     }
 
