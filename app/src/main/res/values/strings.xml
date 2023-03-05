@@ -3,5 +3,22 @@
     <string name="itemAboutApp">About App</string>
     <string name="Settigs">Settings</string>
     <string name="ItemExit">Exit</string>
+    <string name="Layout_enter_first_name">Enter First Name</string>
+    <string name="Layout_enter_email_address">Enter Email Address</string>
+    <string name="Layout_enter_last_name">Enter Last Name</string>
+    <string name="Layout_enter_phone_name">Enter Phone Name</string>
+    <string name="Layout_enter_alternative_phone_number">Enter Alternative Phone Number</string>
+    <string name="txt_View_gender">Gender :</string>
+    <string name="RB_male">Male</string>
+    <string name="RB_female">Female</string>
+    <string name="RB_other">Other</string>
+    <string name="txtView_hobbies">Hobbies</string>
+    <string name="CB_programming">Programming</string>
+    <string name="CB_study_novel">Study Novel</string>
+    <string name="CB_watching_movies">Watching Movies</string>
+    <string name="CB_travelling">Travelling</string>
+    <string name="CB_gaming">Gaming</string>
+    <string name="btn_submit">SUBMIT</string>
+    <string name="btn_clear">CLEAR</string>
 
 </resources>
