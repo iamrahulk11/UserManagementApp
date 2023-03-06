@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -122,30 +123,39 @@
             android:id="@+id/Radiogroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
 
             <RadioButton
                 android:id="@+id/male"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/shape"
                 android:text="@string/RB_male"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_marginRight="20dp"/>
 
             <RadioButton
                 android:id="@+id/female"
                 android:layout_width="wrap_content"
+                android:background="@drawable/shape"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
                 android:text="@string/RB_female"
                 android:textSize="20sp" />
 
             <RadioButton
                 android:id="@+id/other"
+                android:background="@drawable/shape"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/RB_other"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_marginLeft="15dp"/>
         </RadioGroup>
+
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textHobbies"
@@ -157,52 +167,56 @@
             android:textSize="25sp"
             android:textStyle="bold" />
 
-        <CheckBox
-            android:id="@+id/H_programming"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:layout_margin="15dp"
 
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/CB_programming"
-            android:textSize="20sp" />
+           >
 
-        <CheckBox
-            android:id="@+id/H_Study_Novel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
+            <CheckBox
+                android:id="@+id/H_programming"
+                android:layout_width="wrap_content"
+                android:background="@drawable/hobbiesborder"
+                android:layout_height="wrap_content"
+                android:text="@string/CB_programming"
+                android:textSize="20sp" />
 
-            android:layout_marginTop="10dp"
-            android:text="@string/CB_study_novel"
-            android:textSize="20sp" />
+            <CheckBox
+                android:id="@+id/H_Study_Novel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hobbiesborder"
 
-        <CheckBox
-            android:id="@+id/h_Movies"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/CB_watching_movies"
-            android:textSize="20sp" />
+                android:text="@string/CB_study_novel"
+                android:textSize="20sp" />
 
-        <CheckBox
-            android:id="@+id/H_Travelling"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/CB_travelling"
-            android:textSize="20sp" />
+            <CheckBox
+                android:id="@+id/h_Movies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hobbiesborder"
+                android:text="@string/CB_watching_movies"
+                android:textSize="20sp" />
 
-        <CheckBox
-            android:id="@+id/H_Gaming"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/CB_gaming"
-            android:textSize="20sp" />
+            <CheckBox
+                android:id="@+id/H_Travelling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hobbiesborder"
+                android:text="@string/CB_travelling"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/H_Gaming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hobbiesborder"
+                android:text="@string/CB_gaming"
+                android:textSize="20sp" />
+        </GridLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/submit"
@@ -211,8 +225,9 @@
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="25dp"
+            android:text="@string/btn_submit"
             android:textSize="25sp"
-            android:text="@string/btn_submit" />
+            android:background="@color/light_blue"/>
 
     </LinearLayout>
 </ScrollView>
