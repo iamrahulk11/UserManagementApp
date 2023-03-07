@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
     >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context=".MainActivity"
-        >
+        tools:context=".MainActivity">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/enter_FirstName"
@@ -20,7 +18,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:hint="@string/Layout_enter_first_name"
-
             app:counterEnabled="true"
             app:counterMaxLength="18"
             app:endIconMode="clear_text">
@@ -28,7 +25,6 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/night_mode"
                 android:drawableStart="@drawable/firstname"
                 android:inputType="textCapWords"
                 android:maxLength="18" />
@@ -49,7 +45,6 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/night_mode"
                 android:drawableStart="@drawable/firstname"
                 android:inputType="textCapWords"
                 android:maxLength="18" />
@@ -70,7 +65,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/email"
-                android:textColor="@color/night_mode"
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -90,7 +84,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/phone"
-                android:textColor="@color/night_mode"
                 android:inputType="phone|number"
                 android:maxLength="10" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -111,7 +104,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/phone"
-                android:textColor="@color/night_mode"
                 android:inputType="phone|number"
                 android:maxLength="10" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -131,9 +123,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            >
+            android:layout_marginTop="10dp">
 
             <RadioButton
                 android:id="@+id/male"
@@ -167,30 +157,23 @@
             android:textSize="25sp"
             android:textStyle="bold" />
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="2"
-        android:rowCount="3"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="15dp"
-        >
         <CheckBox
             android:id="@+id/H_programming"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/hobbiesshape"
-            android:padding="15dp"
+
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
             android:text="@string/CB_programming"
             android:textSize="20sp" />
 
         <CheckBox
             android:id="@+id/H_Study_Novel"
-            android:padding="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/hobbiesshape"
+            android:layout_marginStart="15dp"
+
+            android:layout_marginTop="10dp"
             android:text="@string/CB_study_novel"
             android:textSize="20sp" />
 
@@ -198,19 +181,17 @@
             android:id="@+id/h_Movies"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
             android:text="@string/CB_watching_movies"
-            android:layout_marginTop="5dp"
-            android:padding="15dp"
-            android:background="@drawable/hobbiesshape"
             android:textSize="20sp" />
 
         <CheckBox
             android:id="@+id/H_Travelling"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:padding="15dp"
-            android:background="@drawable/hobbiesshape"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
             android:text="@string/CB_travelling"
             android:textSize="20sp" />
 
@@ -218,30 +199,19 @@
             android:id="@+id/H_Gaming"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:padding="15dp"
-            android:background="@drawable/hobbiesshape"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
             android:text="@string/CB_gaming"
             android:textSize="20sp" />
-        <CheckBox
-            android:id="@+id/H_drawing"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Drawing"
-            android:layout_marginTop="5dp"
-            android:padding="15dp"
-            android:textSize="20sp"
-            android:background="@drawable/hobbiesshape"/>
-    </GridLayout>
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="20dp"
-            android:textSize="20sp"
-            android:background="@drawable/btnshape"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="25dp"
+            android:textSize="25sp"
             android:text="@string/btn_submit" />
 
     </LinearLayout>

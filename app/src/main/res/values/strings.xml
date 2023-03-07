@@ -12,7 +12,7 @@
     <string name="RB_male">Male</string>
     <string name="RB_female">Female</string>
     <string name="RB_other">Other</string>
-    <string name="txtView_hobbies">Hobbies</string>
+    <string name="txtView_hobbies">Hobbies :</string>
     <string name="CB_programming">Programming</string>
     <string name="CB_study_novel">Study Novel</string>
     <string name="CB_watching_movies">Watching Movies</string>
