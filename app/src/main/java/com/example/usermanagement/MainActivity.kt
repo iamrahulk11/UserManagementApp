@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Html
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -40,6 +41,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         context = this@MainActivity
+        getSupportActionBar()?.setTitle(Html.fromHtml("<font color=\"#FFFFFFFF\">"+getString(R.string.app_name)+"</font>"))
         binding.enterFirstName.editText!!.requestFocus()
 
 //        binding.AboveDataShowing.visibility = View.INVISIBLE
@@ -51,6 +53,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
         binding.Radiogroup.setOnCheckedChangeListener(this)
         //hobbies listener
         binding.HProgramming.setOnCheckedChangeListener(this)
+        binding.HDrawing.setOnCheckedChangeListener(this)
         binding.HTravelling.setOnCheckedChangeListener(this)
         binding.HGaming.setOnCheckedChangeListener(this)
         binding.HStudyNovel.setOnCheckedChangeListener(this)
@@ -356,6 +359,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
                     UserHobbies.add(binding.hMovies.text.toString())
                 }else{
                     UserHobbies.remove(binding.hMovies.text.toString())
+                }
+            }
+            R.id.H_drawing -> {
+                if (binding.HDrawing.isChecked) {
+                    UserHobbies.add(binding.HDrawing.text.toString())
+                }else{
+                    UserHobbies.remove(binding.HDrawing.text.toString())
                 }
             }
         }

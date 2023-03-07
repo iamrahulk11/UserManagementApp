@@ -24,7 +24,7 @@ class SecondActivity : AppCompatActivity(), View.OnClickListener {
 
         val result=user.hobbies.toString().replace("[", "").replace("]", "").replace(",","\n").replace(" ","")
 
-        binding.DisplayData.text = "Username : ${user.fName} ${user.lName}\nPhone No : ${user.mobNo}\nAltn Phone No : ${user.atlMob}\nEmail : ${user.email}\nGender : ${user.gender}\nUser Hobbies :\n${result}"
+        binding.DisplayData.text = "USERNAME : ${user.fName} ${user.lName}\nPHONE No : ${user.mobNo}\nALTN PHONE No : ${user.atlMob}\nEMAIL : ${user.email}\nGENDER : ${user.gender}\n\nUSER HOBBIES :\n${result}"
         binding.btnclear.setOnClickListener(this)
     }
     override fun onBackPressed() {
