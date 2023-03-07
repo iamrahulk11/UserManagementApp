@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SecondActivity"
-    android:background="@color/night_mode"
     >
 
     <com.google.android.material.textview.MaterialTextView
@@ -15,35 +14,31 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="monospace"
         android:text="User Data"
-        android:textColor="#EDE5E5"
+        android:textColor="@color/night_mode"
         android:textSize="35sp"
         android:layout_marginTop="15dp"
         android:textStyle="bold" />
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_centerInParent="true"
-    android:layout_margin="15dp">
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/DisplayData"
-        style="@style/Widget.MaterialComponents.TabLayout.Colored"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_centerInParent="true"
         android:background="@color/night_mode"
         android:fontFamily="monospace"
-        android:textColor="@color/white"
         android:textSize="20sp"
-
+        android:textColor="@color/night_mode"
         android:textStyle="bold" />
-</ScrollView>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnclear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="@color/teal_200"
+        android:background="@drawable/shape"
         android:text="@string/btn_clear"
         android:textSize="20sp"
         android:layout_marginBottom="20dp"/>

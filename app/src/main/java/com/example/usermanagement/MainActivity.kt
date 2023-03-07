@@ -2,6 +2,7 @@ package com.example.usermanagement
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
@@ -41,7 +42,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         context = this@MainActivity
-        getSupportActionBar()?.setTitle(Html.fromHtml("<font color=\"#FFFFFFFF\">"+getString(R.string.app_name)+"</font>"))
+//        getSupportActionBar()?.setTitle(Html.fromHtml("<font color=\"#FFFFFFFF\">"+getString(R.string.app_name)+"</font>"))
+
+
         binding.enterFirstName.editText!!.requestFocus()
 
 //        binding.AboveDataShowing.visibility = View.INVISIBLE

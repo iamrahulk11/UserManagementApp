@@ -20,5 +20,6 @@
     <string name="CB_gaming">Gaming</string>
     <string name="btn_submit">SUBMIT</string>
     <string name="btn_clear">CLEAR</string>
+    <string name="cb_drawing">Drawing</string>
 
 </resources>
