@@ -5,6 +5,7 @@ import android.os.Binder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toolbar
 import androidx.appcompat.app.AlertDialog
 import com.example.usermanagement.databinding.ActivitySecondBinding
 import com.example.usermanagement.util.keys
@@ -12,11 +13,16 @@ import com.google.gson.Gson
 
 class SecondActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var binding: ActivitySecondBinding
-
+    lateinit var toolbar: Toolbar
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivitySecondBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        setSupportActionBar(binding.toolbar)
+//        getSupportActionBar()?.setTitle(Html.fromHtml("<font color=\"#FFFFFFFF\">"+getString(R.string.app_name)+"</font>"))
+       // supportActionBar?.setDisplayShowHomeEnabled(true)
+
 
         val intent = intent
         val intentData =  intent.getStringExtra(keys.JSON_USER)

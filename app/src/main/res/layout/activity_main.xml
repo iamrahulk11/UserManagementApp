@@ -10,6 +10,21 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:context=".MainActivity">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:title="User Management"
+            app:titleTextColor="@color/white"
+            android:layout_width="match_parent"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_height="wrap_content"
+            android:background="@color/night_mode">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/enter_FirstName"
@@ -28,7 +43,7 @@
                 android:drawableStart="@drawable/firstname"
                 android:inputType="textCapWords"
                 android:maxLength="18"
-                android:textColor="@color/night_mode"/>
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -49,7 +64,7 @@
                 android:drawableStart="@drawable/firstname"
                 android:inputType="textCapWords"
                 android:maxLength="18"
-                android:textColor="@color/night_mode"/>
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -68,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/email"
                 android:inputType="textEmailAddress"
-                android:textColor="@color/night_mode"/>
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -89,7 +104,7 @@
                 android:drawableStart="@drawable/phone"
                 android:inputType="phone|number"
                 android:maxLength="10"
-                android:textColor="@color/night_mode"/>
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -110,7 +125,7 @@
                 android:drawableStart="@drawable/phone"
                 android:inputType="phone|number"
                 android:maxLength="10"
-                android:textColor="@color/night_mode"/>
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -188,7 +203,7 @@
 
             <CheckBox
                 android:id="@+id/H_Study_Novel"
-                android:layout_marginLeft="-25dp"
+                android:layout_marginLeft="-20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/hobbiesborder"
@@ -211,7 +226,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="8dp"
                 android:background="@drawable/hobbiesborder"
                 android:text="@string/CB_travelling"
                 android:textSize="20sp"
@@ -236,7 +251,7 @@
                 android:text="@string/cb_drawing"
                 android:textSize="20sp"
                 android:padding="10dp"
-                android:layout_marginLeft="-80dp"/>
+                android:layout_marginLeft="-70dp"/>
         </GridLayout>
 
         <com.google.android.material.button.MaterialButton

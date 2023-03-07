@@ -7,13 +7,32 @@
     android:layout_height="match_parent"
     tools:context=".SecondActivity"
     >
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:title="User Management"
+            app:titleTextColor="@color/white"
+            android:layout_width="match_parent"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_height="wrap_content"
+            android:background="@color/night_mode">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/textUserdata"
         android:layout_centerHorizontal="true"
         android:fontFamily="monospace"
-        android:text="User Data"
+        android:text="@string/txtuser_data"
+        android:layout_below="@id/appbar"
         android:textColor="@color/night_mode"
         android:textSize="35sp"
         android:layout_marginTop="15dp"
@@ -21,12 +40,14 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/DisplayData"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"
-        android:layout_width="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_width="match_parent"
+        android:layout_below="@id/textUserdata"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:background="@color/night_mode"
         android:fontFamily="monospace"
         android:textSize="20sp"
         android:textColor="@color/night_mode"

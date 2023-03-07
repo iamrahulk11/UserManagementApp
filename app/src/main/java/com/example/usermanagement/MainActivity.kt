@@ -22,11 +22,15 @@ import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.internal.ToolbarUtils
 import com.google.gson.Gson
 import java.util.*
+
 import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnCheckedChangeListener,
     CompoundButton.OnCheckedChangeListener {
     private lateinit var binding: ActivityMainBinding
+
+    lateinit var toolbar:Toolbar
+
     private var fname: String? = null
     private var lname: String? = null
     private var mobileNo: String? = null
@@ -42,8 +46,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         context = this@MainActivity
-//        getSupportActionBar()?.setTitle(Html.fromHtml("<font color=\"#FFFFFFFF\">"+getString(R.string.app_name)+"</font>"))
 
+        setSupportActionBar(binding.toolbar)
+//        getSupportActionBar()?.setTitle(Html.fromHtml("<font color=\"#FFFFFFFF\">"+getString(R.string.app_name)+"</font>"))
+        supportActionBar?.setDisplayShowHomeEnabled(true)
 
         binding.enterFirstName.editText!!.requestFocus()
 
