@@ -22,5 +22,6 @@
     <string name="btn_clear">CLEAR</string>
     <string name="cb_drawing">Drawing</string>
     <string name="txtuser_data">User Data</string>
+    <string name="header_application_form">Application Form</string>
 
 </resources>

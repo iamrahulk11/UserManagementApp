@@ -12,19 +12,33 @@
         tools:context=".MainActivity">
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            >
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             app:title="User Management"
             app:titleTextColor="@color/white"
             android:layout_width="match_parent"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            style="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary"
             android:layout_height="wrap_content"
             android:background="@color/night_mode">
 
         </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/header_application_form"
+            android:textSize="35sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:fontFamily="monospace"
+
+            />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/enter_FirstName"
@@ -96,12 +110,13 @@
             app:counterEnabled="true"
             app:counterMaxLength="10"
             app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/phone"
             app:prefixText="+91">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/phone"
+
                 android:inputType="phone|number"
                 android:maxLength="10"
                 />
@@ -117,12 +132,12 @@
             app:counterEnabled="true"
             app:counterMaxLength="10"
             app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/phone"
             app:prefixText="+91">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/phone"
                 android:inputType="phone|number"
                 android:maxLength="10"
                 />
